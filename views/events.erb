@@ -1,0 +1,13 @@
+<h3>The list of events</h3>
+<ol>
+  <% i = 0 %>
+  <% @events.each do |e| %>
+	<li>
+    ......
+		<strong><%= e.name %></strong>
+    .....
+    <%= e.date %>
+	</li>
+  <% end %>
+</ol>
+<a href="/">Go Back</a>

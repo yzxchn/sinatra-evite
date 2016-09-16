@@ -1,0 +1,15 @@
+<h3>The list of people</h3>
+<ol>
+  <% i = 0 %>
+  <% @people.each do |pers| %>
+	<li>
+    ......
+		<strong><%= pers.name %></strong>
+    .....
+    <%= pers.birthday %>
+    <%= pers.gender %>
+    <%= pers.zipcode %>
+	</li>
+  <% end %>
+</ol>
+<a href="/">Go Back</a>

@@ -1,0 +1,22 @@
+<h3>Add a new registration</h3>
+<form action="/registration/new/submit" method="POST">
+  Name:
+  <select name="registration[person_id]">
+    <% @people.each do |pers| %>
+      <option value='<%= pers.name %>'><%= pers.name %></option>
+    <% end %>
+  </select>
+  Event:
+  <select name="registration[event_id]">
+    <% @events.each do |e| %>
+      <option value='<%= e.name %>'><%= e.name %></option>
+    <% end %>
+  </select>
+  Status:
+  <select name="registration[status]">
+    <option value="going">Going</option>
+    <option value="not_going">Not Going</option>
+    <option value="maybe">Maybe</option>
+  </select>
+  <input type="submit" value="Submit" />
+</form>
