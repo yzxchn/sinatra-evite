@@ -1,12 +1,17 @@
 <h3>The list of registrations</h3>
-<ol>
+<table>
+	<tr>
+    <th>Name</th>
+    <th>Event</th>
+    <th>Going?</th>
+  </tr>
   <% i = 0 %>
   <% @registrations.each do |r| %>
-	<li>
-    <%= r.person_id %>
-    <%= r.status %>
-    <%= r.event_id %>
-	</li>
+	<tr>
+    <td><%= @people.find_by_id(r.person_id).name %></td>
+    <td><%= @events.find_by_id(r.event_id).name %></td>  
+    <td><%= r.status %></td>
+	</tr>
   <% end %>
-</ol>
+</table>
 <a href="/">Go Back</a>

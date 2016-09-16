@@ -46,6 +46,8 @@ post '/event/new/submit' do
 end
 
 get '/registrations' do
+	@events = Event.all
+	@people = Person.all
 	@registrations = Registration.all
 	erb :registrations
 end

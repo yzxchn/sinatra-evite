@@ -1,6 +1,8 @@
 <h3>Add a new person</h3>
 <form action="/person/new/submit" method="POST">
+  Name:
 	<input type="text" name="person[name]" placeholder="Enter Name Here" />
+	Birthday
 	<input type="date" name="person[birthday]" placeholder="mm/dd/yyyy" />
 	Gender:
 	<select name="person[gender]">
@@ -8,6 +10,7 @@
 		<option value="female">Female</option>
 		<option value="other">Other</option>
 	</select>
+	Zipcode:
 	<input type="text" name="person[zipcode]" placeholder="xxxxx"/>
 	<input type="submit" value="Submit" />
 </form>

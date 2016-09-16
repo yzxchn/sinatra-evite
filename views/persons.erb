@@ -1,15 +1,19 @@
 <h3>The list of people</h3>
-<ol>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Date of Birth</th>
+    <th>Gender</th>
+    <th>Zipcode</th>
+  </tr>
   <% i = 0 %>
   <% @people.each do |pers| %>
-	<li>
-    ......
-		<strong><%= pers.name %></strong>
-    .....
-    <%= pers.birthday %>
-    <%= pers.gender %>
-    <%= pers.zipcode %>
-	</li>
+	<tr>
+		<td><%= pers.name %></td>
+    <td><%= pers.birthday %></td>
+    <td><%= pers.gender %></td>
+    <td><%= pers.zipcode %></td>
+	</tr>
   <% end %>
-</ol>
+</table>
 <a href="/">Go Back</a>

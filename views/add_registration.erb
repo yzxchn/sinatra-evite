@@ -3,13 +3,13 @@
   Name:
   <select name="registration[person_id]">
     <% @people.each do |pers| %>
-      <option value='<%= pers.name %>'><%= pers.name %></option>
+      <option value='<%= pers.id %>'><%= pers.name %></option>
     <% end %>
   </select>
   Event:
   <select name="registration[event_id]">
     <% @events.each do |e| %>
-      <option value='<%= e.name %>'><%= e.name %></option>
+      <option value='<%= e.id %>'><%= e.name %> on <%= e.date %></option>
     <% end %>
   </select>
   Status:

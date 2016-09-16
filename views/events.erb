@@ -1,13 +1,15 @@
 <h3>The list of events</h3>
-<ol>
+<table>
+  <tr>
+  	<th>Name</th>
+  	<th>Date</th>
+  </tr>
   <% i = 0 %>
   <% @events.each do |e| %>
-	<li>
-    ......
-		<strong><%= e.name %></strong>
-    .....
-    <%= e.date %>
-	</li>
+	<tr>
+	  <td><%= e.name %></td>
+      <td><%= e.date %></td>
+	</tr>
   <% end %>
-</ol>
+</table>
 <a href="/">Go Back</a>
